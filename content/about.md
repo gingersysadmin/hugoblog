@@ -18,4 +18,4 @@ The best way to reach me is via my email at `hello (at) gingersysadmin (dot) com
 
 - **Github**: https://github.com/gingersysadmin
 - **Email**: `hello (at) gingersysadmin (dot) com`
-- **LinkedIn**: https://www.linkedin.com/in/bradenterpstra/
+- **LinkedIn**: [https://www.linkedin.com/in/bradenterpstra/](https://www.linkedin.com/in/bradenterpstra/)
