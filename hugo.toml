@@ -2,6 +2,7 @@ baseURL = 'https://gingersysadmin.com/'
 languageCode = 'en-us'
 title = 'The Ginger Sysadmin Blog'
 theme = 'terminal'
+enableEmoji = 'true'
 [caches]
   [caches.images]
     dir = ':cacheDir/images'

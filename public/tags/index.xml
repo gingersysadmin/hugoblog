@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Terminal</title>
-    <link>https://gingersysadmin.com/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Terminal</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 07 Mar 2026 07:57:03 -0500</lastBuildDate>
-    <atom:link href="https://gingersysadmin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gnome</title>
-      <link>https://gingersysadmin.com/tags/gnome/</link>
+      <link>http://localhost:1313/tags/gnome/</link>
       <pubDate>Sat, 07 Mar 2026 07:57:03 -0500</pubDate>
-      <guid>https://gingersysadmin.com/tags/gnome/</guid>
+      <guid>http://localhost:1313/tags/gnome/</guid>
       <description></description>
     </item>
     <item>
       <title>Opensuse</title>
-      <link>https://gingersysadmin.com/tags/opensuse/</link>
+      <link>http://localhost:1313/tags/opensuse/</link>
       <pubDate>Sat, 07 Mar 2026 07:57:03 -0500</pubDate>
-      <guid>https://gingersysadmin.com/tags/opensuse/</guid>
+      <guid>http://localhost:1313/tags/opensuse/</guid>
       <description></description>
     </item>
   </channel>

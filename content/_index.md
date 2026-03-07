@@ -2,6 +2,6 @@
 framed = true
 +++
 
-## Hello There!
+## Hello There :man_technologist:
 
-My name is Braden and I'm the author of this blog.
+My name is Braden and this is my blog.
