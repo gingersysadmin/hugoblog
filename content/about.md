@@ -3,7 +3,6 @@ draft = false
 title = 'About me'
 slug = 'about'
 type = 'page'
-author = 'Braden'
 +++
 
 Hi there! I am a sysadmin living in Grand Rapids, MI. 

@@ -2,17 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Terminal</title>
-    <link>https://gingersysadmin.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Terminal</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://gingersysadmin.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Mar 2026 07:57:03 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GNOME Power Daemon Bug Blacks Screen After 30 Seconds</title>
+      <link>http://localhost:1313/posts/gnome-screen-blank/</link>
+      <pubDate>Sat, 07 Mar 2026 07:57:03 -0500</pubDate>
+      <guid>http://localhost:1313/posts/gnome-screen-blank/</guid>
+      <description>&lt;h1 id=&#34;symptoms&#34;&gt;Symptoms&lt;/h1&gt;&#xA;&lt;p&gt;As of March 2026 (time of writing), a bug has existed in GNOME for a few years that causes the display to go black after 30 seconds of inactivity (not suspended or locked, just goes dark). This behavior has been consistent when using OpenSUSE Leap 15.x and 16.x connected to an external display. When resuming from sleep, the screen will go black after just 30 seconds of inactivity regardless of the configured power settings. A system reboot resolves the issue until the next time the system resumes from sleep/suspend.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>About me</title>
-      <link>https://gingersysadmin.com/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gingersysadmin.com/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>&lt;p&gt;Hi there! I am a sysadmin living in Grand Rapids, MI.&lt;/p&gt;&#xA;&lt;h1 id=&#34;skills--tools&#34;&gt;Skills &amp;amp; Tools&lt;/h1&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Category&lt;/th&gt;&#xA;          &lt;th&gt;Tools / Languages&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Linux&lt;/td&gt;&#xA;          &lt;td&gt;RHEL, Debian, SUSE&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h1 id=&#34;contact&#34;&gt;Contact&lt;/h1&gt;&#xA;&lt;p&gt;The best way to reach me is via my email at &lt;code&gt;hello (at) gingersysadmin (dot) com&lt;/code&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Github&lt;/strong&gt;: &lt;a href=&#34;https://github.com/gingersysadmin&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/gingersysadmin&lt;/a&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Email&lt;/strong&gt;: &lt;code&gt;hello (at) gingersysadmin (dot) com&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;LinkedIn&lt;/strong&gt;: &lt;a href=&#34;https://www.linkedin.com/in/bradenterpstra/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.linkedin.com/in/bradenterpstra/&lt;/a&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
