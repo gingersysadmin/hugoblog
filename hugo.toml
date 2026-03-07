@@ -1,4 +1,4 @@
-baseURL = 'https://gingersysadmin.com/'
+baseURL = 'https://gingersysadmin.com'
 languageCode = 'en-us'
 title = 'The Ginger Sysadmin Blog'
 theme = 'terminal'
