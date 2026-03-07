@@ -2,26 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://gingersysadmin.com/</loc>
     <lastmod>2026-03-07T07:57:03-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/gnome/</loc>
+    <loc>https://gingersysadmin.com/tags/gnome/</loc>
     <lastmod>2026-03-07T07:57:03-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/gnome-30-sec-blackscreen/</loc>
+    <loc>https://gingersysadmin.com/posts/gnome-screen-blank/</loc>
     <lastmod>2026-03-07T07:57:03-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/opensuse/</loc>
+    <loc>https://gingersysadmin.com/tags/opensuse/</loc>
     <lastmod>2026-03-07T07:57:03-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://gingersysadmin.com/posts/</loc>
     <lastmod>2026-03-07T07:57:03-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://gingersysadmin.com/tags/</loc>
     <lastmod>2026-03-07T07:57:03-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://gingersysadmin.com/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://gingersysadmin.com/categories/</loc>
   </url>
 </urlset>

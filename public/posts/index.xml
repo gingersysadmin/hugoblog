@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Terminal</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://gingersysadmin.com/posts/</link>
     <description>Recent content in Posts on Terminal</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 07 Mar 2026 07:57:03 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://gingersysadmin.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GNOME Power Daemon Bug Blacks Screen After 30 Seconds</title>
-      <link>http://localhost:1313/posts/gnome-30-sec-blackscreen/</link>
+      <link>https://gingersysadmin.com/posts/gnome-screen-blank/</link>
       <pubDate>Sat, 07 Mar 2026 07:57:03 -0500</pubDate>
-      <guid>http://localhost:1313/posts/gnome-30-sec-blackscreen/</guid>
+      <guid>https://gingersysadmin.com/posts/gnome-screen-blank/</guid>
       <description>&lt;h1 id=&#34;symptoms&#34;&gt;Symptoms&lt;/h1&gt;&#xA;&lt;p&gt;As of March 2026 (time of writing), a bug has existed in GNOME for a few years that causes the display to go black after 30 seconds of inactivity (not suspended or locked, just goes dark). This behavior has been consistent when using OpenSUSE Leap 15.x and 16.x connected to an external display. When resuming from sleep, the screen will go black after just 30 seconds of inactivity regardless of the configured power settings. A system reboot resolves the issue until the next time the system resumes from sleep/suspend.&lt;/p&gt;</description>
     </item>
   </channel>
