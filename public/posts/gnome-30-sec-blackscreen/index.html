@@ -2,11 +2,12 @@
 <html lang="en">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   
-    <title>Gnome 30 Sec Blackscreen :: Terminal</title>
+    <title>GNOME Power Deaemon Bug Blacks Screen after 30 Seconds :: Terminal</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="" />
+<meta name="description" content="Symptoms As of March 2026 (time of writing), a bug has existed in GNOME for a few years that causes the display to go black after 30 seconds of inactivity. This behavior has been consistent for me when using OpenSUSE Leap 15.x and 16.x when connected to an external display and the laptop goes to sleep. When resuming from sleep, the screen will go black after just 30 seconds of inactivity regardless of whatever power settings are configured.
+" />
 <meta name="keywords" content=", " />
 
   <meta name="robots" content="noodp" />
@@ -72,8 +73,9 @@
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Gnome 30 Sec Blackscreen">
-<meta property="og:description" content="" />
+<meta property="og:title" content="GNOME Power Deaemon Bug Blacks Screen after 30 Seconds">
+<meta property="og:description" content="Symptoms As of March 2026 (time of writing), a bug has existed in GNOME for a few years that causes the display to go black after 30 seconds of inactivity. This behavior has been consistent for me when using OpenSUSE Leap 15.x and 16.x when connected to an external display and the laptop goes to sleep. When resuming from sleep, the screen will go black after just 30 seconds of inactivity regardless of whatever power settings are configured.
+" />
 <meta property="og:url" content="http://localhost:1313/posts/gnome-30-sec-blackscreen/" />
 <meta property="og:site_name" content="Terminal" />
 
@@ -181,16 +183,16 @@
     
 <article class="post">
   <h1 class="post-title">
-    <a href="http://localhost:1313/posts/gnome-30-sec-blackscreen/">Gnome 30 Sec Blackscreen</a>
+    <a href="http://localhost:1313/posts/gnome-30-sec-blackscreen/">GNOME Power Deaemon Bug Blacks Screen after 30 Seconds</a>
   </h1>
   <div class="post-meta"><time class="post-date">2026-03-07</time></div>
 
   
     <span class="post-tags">
       
-      #<a href="http://localhost:1313/tags/"></a>&nbsp;
+      #<a href="http://localhost:1313/tags/gnome/">gnome</a>&nbsp;
       
-      #<a href="http://localhost:1313/tags/"></a>&nbsp;
+      #<a href="http://localhost:1313/tags/opensuse/">opensuse</a>&nbsp;
       
     </span>
   
@@ -199,7 +201,16 @@
 
   
 
-  <div class="post-content"></div>
+  <div class="post-content"><div>
+        <h1 id="symptoms">Symptoms<a href="#symptoms" class="hanchor" ariaLabel="Anchor">#</a> </h1>
+<p>As of March 2026 (time of writing), a bug has existed in GNOME for a few years that causes the display to go black after 30 seconds of inactivity. This behavior has been consistent for me when using OpenSUSE Leap 15.x and 16.x when connected to an external display and the laptop goes to sleep. When resuming from sleep, the screen will go black after just 30 seconds of inactivity regardless of whatever power settings are configured.</p>
+<h1 id="issue">Issue<a href="#issue" class="hanchor" ariaLabel="Anchor">#</a> </h1>
+<p><a href="https://gitlab.gnome.org/GNOME/gnome-settings-daemon/-/issues/687" target="_blank" rel="noopener">https://gitlab.gnome.org/GNOME/gnome-settings-daemon/-/issues/687</a>
+</p>
+<h1 id="workaround">Workaround<a href="#workaround" class="hanchor" ariaLabel="Anchor">#</a> </h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl restart --user org.gnome.SettingsDaemon.Power.target
+</span></span></code></pre></div>
+      </div></div>
 
   
     
