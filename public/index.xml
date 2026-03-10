@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Terminal</title>
+    <title>The Ginger Sysadmin Blog</title>
     <link>https://gingersysadmin.com/</link>
-    <description>Recent content on Terminal</description>
+    <description>Recent content on The Ginger Sysadmin Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 07 Mar 2026 07:57:03 -0500</lastBuildDate>
@@ -20,7 +20,7 @@
       <link>https://gingersysadmin.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://gingersysadmin.com/about/</guid>
-      <description>&lt;p&gt;Hi there! I am a sysadmin living in Grand Rapids, MI.&lt;/p&gt;&#xA;&lt;h1 id=&#34;skills--tools&#34;&gt;Skills &amp;amp; Tools&lt;/h1&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Category&lt;/th&gt;&#xA;          &lt;th&gt;Tools / Languages&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Linux&lt;/td&gt;&#xA;          &lt;td&gt;RHEL, Debian, SUSE&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h1 id=&#34;contact&#34;&gt;Contact&lt;/h1&gt;&#xA;&lt;p&gt;The best way to reach me is via my email at &lt;code&gt;hello (at) gingersysadmin (dot) com&lt;/code&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Github&lt;/strong&gt;: &lt;a href=&#34;https://github.com/gingersysadmin&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/gingersysadmin&lt;/a&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Email&lt;/strong&gt;: &lt;code&gt;hello (at) gingersysadmin (dot) com&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;LinkedIn&lt;/strong&gt;: &lt;a href=&#34;https://www.linkedin.com/in/bradenterpstra/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.linkedin.com/in/bradenterpstra/&lt;/a&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <description>&lt;p&gt;I am a Systems Administrator living in Grand Rapids, Michigan.&lt;/p&gt;&#xA;&lt;p&gt;I currently work at Morrison Industries.&lt;/p&gt;&#xA;&lt;p&gt;Graduate of Grand Valley State University.&lt;/p&gt;&#xA;&lt;h1 id=&#34;current-projects&#34;&gt;Current Projects&lt;/h1&gt;&#xA;&lt;h3 id=&#34;mentoring-first-robotics&#34;&gt;Mentoring FIRST Robotics&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.thatoneteam.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;That ONE Team #4967 - &lt;em&gt;FIRST&lt;/em&gt;© Robotics Competition Team&lt;/a&gt;&#xA;&lt;/p&gt;&#xA;&lt;h3 id=&#34;rebuilding-homelab&#34;&gt;Rebuilding Homelab&lt;/h3&gt;&#xA;&lt;p&gt;I built a homelab using TrueNAS, but now that I have a little extra free time, I am rebuilding it from scratch on Debian, handling the ZFS snapshots, backups, etc. using Sanoid/Syncoid and QEMU/libvirt for VM management. TrueNAS was fun, but I wanted to learn how to set everything up myself.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
