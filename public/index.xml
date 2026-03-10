@@ -2,24 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The Ginger Sysadmin Blog</title>
-    <link>https://gingersysadmin.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on The Ginger Sysadmin Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Mar 2026 07:57:03 -0500</lastBuildDate>
-    <atom:link href="https://gingersysadmin.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Mar 2026 00:11:43 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Links</title>
+      <link>http://localhost:1313/links/</link>
+      <pubDate>Tue, 10 Mar 2026 00:11:43 -0400</pubDate>
+      <guid>http://localhost:1313/links/</guid>
+      <description>&lt;p&gt;The following are links to projects and tools I use, and other things I find generally helpful.&lt;/p&gt;&#xA;&lt;h2 id=&#34;apps-i-run&#34;&gt;Apps I Run&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://immich.app&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Immich - Project Supporter&lt;/a&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://actualbudget.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Actual Budget Finances - Project Supporter&lt;/a&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://karakeep.app&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Karakeep - RIP Pocket&lt;/a&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://mealie.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mealie Recipe Management&lt;/a&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.pikapods.com/pods?run=fusion&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fusion RSS - PikaPods Supporter&lt;/a&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;selfhost-sites&#34;&gt;Selfhost Sites&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://selfh.st&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;selfh.st - Apps, Icons, News&lt;/a&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>GNOME Power Daemon Bug Blacks Screen After 30 Seconds</title>
-      <link>https://gingersysadmin.com/posts/gnome-screen-blank/</link>
+      <link>http://localhost:1313/posts/gnome-screen-blank/</link>
       <pubDate>Sat, 07 Mar 2026 07:57:03 -0500</pubDate>
-      <guid>https://gingersysadmin.com/posts/gnome-screen-blank/</guid>
+      <guid>http://localhost:1313/posts/gnome-screen-blank/</guid>
       <description>&lt;h1 id=&#34;symptoms&#34;&gt;Symptoms&lt;/h1&gt;&#xA;&lt;p&gt;As of March 2026 (time of writing), a bug has existed in GNOME for a few years that causes the display to go black after 30 seconds of inactivity (not suspended or locked, just goes dark). This behavior has been consistent when using OpenSUSE Leap 15.x and 16.x connected to an external display. When resuming from sleep, the screen will go black after just 30 seconds of inactivity regardless of the configured power settings. A system reboot resolves the issue until the next time the system resumes from sleep/suspend.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About me</title>
-      <link>https://gingersysadmin.com/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gingersysadmin.com/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>&lt;p&gt;I am a Systems Administrator living in Grand Rapids, Michigan.&lt;/p&gt;&#xA;&lt;p&gt;I currently work at Morrison Industries.&lt;/p&gt;&#xA;&lt;p&gt;Graduate of Grand Valley State University.&lt;/p&gt;&#xA;&lt;h1 id=&#34;current-projects&#34;&gt;Current Projects&lt;/h1&gt;&#xA;&lt;h3 id=&#34;mentoring-first-robotics&#34;&gt;Mentoring FIRST Robotics&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.thatoneteam.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;That ONE Team #4967 - &lt;em&gt;FIRST&lt;/em&gt;© Robotics Competition Team&lt;/a&gt;&#xA;&lt;/p&gt;&#xA;&lt;h3 id=&#34;rebuilding-homelab&#34;&gt;Rebuilding Homelab&lt;/h3&gt;&#xA;&lt;p&gt;I built a homelab using TrueNAS, but now that I have a little extra free time, I am rebuilding it from scratch on Debian, handling the ZFS snapshots, backups, etc. using Sanoid/Syncoid and QEMU/libvirt for VM management. TrueNAS was fun, but I wanted to learn how to set everything up myself.&lt;/p&gt;</description>
     </item>
   </channel>

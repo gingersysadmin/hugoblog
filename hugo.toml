@@ -97,10 +97,15 @@ pagination.pagerSize = 5
           url = "/about"
           weight = 2
         [[languages.en.menu.main]]
+          identifier = "links"
+          name = "Links"
+          url = "/links"
+          weight = 3
+        [[languages.en.menu.main]]
           identifier = "posts"
           name = "Posts"
           url = "/posts"
-          weight = 3
+          weight = 4
 #        [[languages.en.menu.main]]
 #          identifier = "showcase"
 #          name = "Showcase"
