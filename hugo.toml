@@ -64,13 +64,13 @@ pagination.pagerSize = 5
 [languages]
   [languages.en]
     languageName = "English"
-    title = "Terminal"
+    title = "The Ginger Sysadmin Blog"
 
     [languages.en.params]
-      subtitle = "A simple, retro theme for Hugo"
+      subtitle = "Blog about everything Systems Administration, Linux, Windows, etc."
       owner = ""
       keywords = ""
-      copyright = ""
+      copyright = "2026"
       menuMore = "Show more"
       readMore = "Read more"
       readOtherPosts = "Read other posts"
