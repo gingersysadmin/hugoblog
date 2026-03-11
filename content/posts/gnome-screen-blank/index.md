@@ -4,10 +4,10 @@ date = "2026-03-07T07:57:03-05:00"
 author = "Braden"
 cover = ""
 tags = ["gnome", "opensuse"]
-keywords = ["", ""]
+keywords = ["gnome", "SettingsDaemon.Power"]
 description = ""
 showFullContent = false
-readingTime = false
+readingTime = true
 hideComments = false
 draft = false
 +++

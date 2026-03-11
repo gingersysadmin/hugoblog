@@ -6,8 +6,36 @@
     <description>Recent content in Tags on The Ginger Sysadmin Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Mar 2026 07:57:03 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 10 Mar 2026 23:13:50 -0400</lastBuildDate>
     <atom:link href="https://gingersysadmin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Homelab</title>
+      <link>https://gingersysadmin.com/tags/homelab/</link>
+      <pubDate>Tue, 10 Mar 2026 23:13:50 -0400</pubDate>
+      <guid>https://gingersysadmin.com/tags/homelab/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Immich</title>
+      <link>https://gingersysadmin.com/tags/immich/</link>
+      <pubDate>Tue, 10 Mar 2026 23:13:50 -0400</pubDate>
+      <guid>https://gingersysadmin.com/tags/immich/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pangolin</title>
+      <link>https://gingersysadmin.com/tags/pangolin/</link>
+      <pubDate>Tue, 10 Mar 2026 23:13:50 -0400</pubDate>
+      <guid>https://gingersysadmin.com/tags/pangolin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reverse Proxy</title>
+      <link>https://gingersysadmin.com/tags/reverse-proxy/</link>
+      <pubDate>Tue, 10 Mar 2026 23:13:50 -0400</pubDate>
+      <guid>https://gingersysadmin.com/tags/reverse-proxy/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Gnome</title>
       <link>https://gingersysadmin.com/tags/gnome/</link>

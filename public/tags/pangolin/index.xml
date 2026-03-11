@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on The Ginger Sysadmin Blog</title>
-    <link>https://gingersysadmin.com/posts/</link>
-    <description>Recent content in Posts on The Ginger Sysadmin Blog</description>
+    <title>Pangolin on The Ginger Sysadmin Blog</title>
+    <link>https://gingersysadmin.com/tags/pangolin/</link>
+    <description>Recent content in Pangolin on The Ginger Sysadmin Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 10 Mar 2026 23:13:50 -0400</lastBuildDate>
-    <atom:link href="https://gingersysadmin.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://gingersysadmin.com/tags/pangolin/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Proxying Immich</title>
       <link>https://gingersysadmin.com/posts/proxying-immich/</link>
       <pubDate>Tue, 10 Mar 2026 23:13:50 -0400</pubDate>
       <guid>https://gingersysadmin.com/posts/proxying-immich/</guid>
       <description>&lt;p&gt;One of my recent projects was setting up Immich for a local FIRST Robotics team. For the past 10 years, they have used 2 Western Digital USB 3.0 HDDs to save all photos and videos for their business subteam. While I was shocked the 2 USB HDDs had survived 10 years of teenagers (nice job WD), it was time for something a bit newer.&lt;/p&gt;&#xA;&lt;p&gt;Enter &lt;a href=&#34;https://immich.app&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Immich&lt;/a&gt;&#xA;, a &amp;ldquo;self-hosted photo and video management solution&amp;rdquo;. I have used Immich personally for about a year and it felt like a great fit. Immich also went stable on October 1st, 2025 which made me feel much more comfortable using it in production.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>GNOME Power Daemon Bug Blacks Screen After 30 Seconds</title>
-      <link>https://gingersysadmin.com/posts/gnome-screen-blank/</link>
-      <pubDate>Sat, 07 Mar 2026 07:57:03 -0500</pubDate>
-      <guid>https://gingersysadmin.com/posts/gnome-screen-blank/</guid>
-      <description>&lt;h1 id=&#34;symptoms&#34;&gt;Symptoms&lt;/h1&gt;&#xA;&lt;p&gt;As of March 2026 (time of writing), a bug has existed in GNOME for a few years that causes the display to go black after 30 seconds of inactivity (not suspended or locked, just goes dark). This behavior has been consistent when using OpenSUSE Leap 15.x and 16.x connected to an external display. When resuming from sleep, the screen will go black after just 30 seconds of inactivity regardless of the configured power settings. A system reboot resolves the issue until the next time the system resumes from sleep/suspend.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

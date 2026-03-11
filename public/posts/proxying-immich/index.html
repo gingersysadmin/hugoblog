@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Proxying Immich :: The Ginger Sysadmin Blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Using Pangolin as a reverse proxy to access Immich from outside a private network." />
+<meta name="keywords" content="immich, pangolin, homelab, reverse proxy" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://gingersysadmin.com/posts/proxying-immich/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="https://gingersysadmin.com/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+
+  
+  <link rel="stylesheet" href="https://gingersysadmin.com/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
+
+  
+  <link rel="stylesheet" href="https://gingersysadmin.com/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+
+  
+  <link rel="stylesheet" href="https://gingersysadmin.com/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+
+  
+  <link rel="stylesheet" href="https://gingersysadmin.com/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://gingersysadmin.com/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+
+  
+  <link rel="stylesheet" href="https://gingersysadmin.com/css/main.min.36833afd348409fc6c3d09d0897c5833d9d5bf1ff31f5e60ea3ee42ce2b1268c.css">
+
+  
+  <link rel="stylesheet" href="https://gingersysadmin.com/css/menu.min.3c17467ebeb3d38663dce68f71f519901124fa5cbb4519b2fb0667a21e9aca39.css">
+
+  
+  <link rel="stylesheet" href="https://gingersysadmin.com/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+
+  
+  <link rel="stylesheet" href="https://gingersysadmin.com/css/post.min.e6dddd258e64c83e05cec0cd49c05216742d42fc8ecbfbe6b67083412b609bd3.css">
+
+  
+  <link rel="stylesheet" href="https://gingersysadmin.com/css/syntax.min.a0773cce9310cb6d8ed23e50f005448facf29a53001b57e038828daa466b25c0.css">
+
+  
+  <link rel="stylesheet" href="https://gingersysadmin.com/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+
+  
+  <link rel="stylesheet" href="https://gingersysadmin.com/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+<link rel="stylesheet" href="https://gingersysadmin.com/terminal.css">
+
+
+
+
+<link rel="shortcut icon" href="https://gingersysadmin.com/favicon.png">
+<link rel="apple-touch-icon" href="https://gingersysadmin.com/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Proxying Immich">
+<meta property="og:description" content="Using Pangolin as a reverse proxy to access Immich from outside a private network." />
+<meta property="og:url" content="https://gingersysadmin.com/posts/proxying-immich/" />
+<meta property="og:site_name" content="The Ginger Sysadmin Blog" />
+
+  
+  
+  <meta property="og:image" content="https://gingersysadmin.com/">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2026-03-10 23:13:50 -0400 EDT" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    GingerSysadmin - Braden Terpstra
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/">Home</a></li>
+        
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/links">Links</a></li>
+        
+      
+        
+          <li><a href="/posts">Posts</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/" >Home</a></li>
+        
+      
+        
+          <li><a href="/about" >About</a></li>
+        
+      
+      
+        <li>
+          <ul class="menu">
+            <li class="menu__trigger">Show more&nbsp;▾</li>
+            <li>
+              <ul class="menu__dropdown">
+                
+                  
+                    <li><a href="/links" >Links</a></li>
+                  
+                
+                  
+                    <li><a href="/posts" >Posts</a></li>
+                  
+                
+              </ul>
+            </li>
+          </ul>
+        </li>
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://gingersysadmin.com/posts/proxying-immich/">Proxying Immich</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2026-03-10</time><span class="post-author">Braden</span><span class="post-reading-time">4 min read (661 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://gingersysadmin.com/tags/immich/">immich</a>&nbsp;
+      
+      #<a href="https://gingersysadmin.com/tags/pangolin/">pangolin</a>&nbsp;
+      
+      #<a href="https://gingersysadmin.com/tags/homelab/">homelab</a>&nbsp;
+      
+      #<a href="https://gingersysadmin.com/tags/reverse-proxy/">reverse proxy</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <p>One of my recent projects was setting up Immich for a local FIRST Robotics team. For the past 10 years, they have used 2 Western Digital USB 3.0 HDDs to save all photos and videos for their business subteam. While I was shocked the 2 USB HDDs had survived 10 years of teenagers (nice job WD), it was time for something a bit newer.</p>
+<p>Enter <a href="https://immich.app" target="_blank" rel="noopener">Immich</a>
+, a &ldquo;self-hosted photo and video management solution&rdquo;. I have used Immich personally for about a year and it felt like a great fit. Immich also went stable on October 1st, 2025 which made me feel much more comfortable using it in production.</p>
+<p>One problem I needed to solve with Immich was public access. The robotics team was using various Google Drive shared folders to allow photo upload from parents and whatnot after events, but that meant it was common for the photo folders on the USB HDDs and Google Drive to fall out of sync (a manual process). I wanted Immich to be the source of truth, no more Google Drive or other places that we needed to import pictures from.</p>
+<h1 id="solution-1---cloudflare-tunnel">Solution 1 - Cloudflare Tunnel<a href="#solution-1---cloudflare-tunnel" class="hanchor" ariaLabel="Anchor">#</a> </h1>
+<p>The first option I tried was <a href="https://developers.cloudflare.com/tunnel/" target="_blank" rel="noopener">Cloudflare Tunnel</a>
+. This setup just required a DNS zone at Cloudflare and the lightweight <em>cloudflared</em> daemon running on the local network to connect Cloudflare to Immich. The setup took about 15 minutes and everything worked like a charm. The only problem was the 100MB file limit and heavy rate limiting by Cloudflare. Cloudflare Tunnels are not supposed to be used to stream videos, so the bursty yet heavy media upload/download traffic of Immich was pushing the limits of the TOS.</p>
+<p>While the Cloudflare Tunnel worked fine for a few months, we started running into issues during competition season when more parents were trying to upload content from their mobile phones with spotty cellular coverage. The uploads could take well over 10 minutes and Cloudflare was killing off the long running HTTP connections before the uploads could finish. I tried tweaking various settings but was not able to fix the timeout issue. Bandwidth was also restricted, and even with a decent connection, uploads were very slow and video uploads would usually time out.</p>
+<h1 id="solution-2---pangolin">Solution 2 - Pangolin<a href="#solution-2---pangolin" class="hanchor" ariaLabel="Anchor">#</a> </h1>
+<p>Enter <a href="https://pangolin.net" target="_blank" rel="noopener">Pangolin</a>
+, an open source &ldquo;identity-aware VPN and proxy for remote access to anything, anywhere.&rdquo; While self-hosting on a VPS is an option, their very generous <a href="https://pangolin.net/pricing" target="_blank" rel="noopener">Pangolin Cloud Basic Free Tier</a>
+ did everything I needed. A few sites said it has a 25GB per month bandwidth limit, but the pricing page mentioned nothing about it. Either way, 25GB was more than enough for my needs.</p>
+<p>Within 15 minutes, I had a <em>fosrl/newt</em> site connector running and Immich proxied through Pangolin Cloud. I won&rsquo;t write my exact steps here as they will likely change. Pangolin is a relatively new offering in the tunnel/proxy world. The basic steps were:</p>
+<ol>
+<li>Install a Site Connector (running in Docker for me)</li>
+<li>Setup Domains (CNAME records pointing to Pangolin Cloud)</li>
+<li>Create a Public Resource linking a FQDN to Immich through the site connector (http://myimmichapp:2283)</li>
+<li>Setup Resource Rules to block by country (not a bulletproof security measure, but no reason anyone outside the US needs to be accessing my Immich)</li>
+</ol>
+<h1 id="the-results">The Results<a href="#the-results" class="hanchor" ariaLabel="Anchor">#</a> </h1>
+<p>So far, I have not run into bandwidth issues and I was able to upload a 50MB video file on a spotty cellular connection through my phone&rsquo;s web browser. The upload took about 10 minutes and never timed out. Even larger videos (100+ MB) on WiFi upload in seconds. A significant improvement from Solution 1. Granted, it is well known in the Immich community that Cloudflare allows, but significantly restricts, media traffic over Cloudflare Tunnels. For what I need, Pangolin does the job and the free tier appears to be all I need. If I do ever need to upgrade, Pangolin <a href="https://docs.pangolin.net/self-host/choosing-a-vps" target="_blank" rel="noopener">partners with RackNerd</a>
+ and offers hosting and 2TB of monthly bandwidth for less than a $1 a month.</p>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+    
+    
+      <a href="https://gingersysadmin.com/posts/gnome-screen-blank/" class="button inline next">
+         [<span class="button__text">GNOME Power Daemon Bug Blacks Screen After 30 Seconds</span>] &gt;
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2026 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

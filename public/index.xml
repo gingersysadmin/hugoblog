@@ -6,8 +6,15 @@
     <description>Recent content on The Ginger Sysadmin Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Mar 2026 00:11:43 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 10 Mar 2026 23:13:50 -0400</lastBuildDate>
     <atom:link href="https://gingersysadmin.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Proxying Immich</title>
+      <link>https://gingersysadmin.com/posts/proxying-immich/</link>
+      <pubDate>Tue, 10 Mar 2026 23:13:50 -0400</pubDate>
+      <guid>https://gingersysadmin.com/posts/proxying-immich/</guid>
+      <description>&lt;p&gt;One of my recent projects was setting up Immich for a local FIRST Robotics team. For the past 10 years, they have used 2 Western Digital USB 3.0 HDDs to save all photos and videos for their business subteam. While I was shocked the 2 USB HDDs had survived 10 years of teenagers (nice job WD), it was time for something a bit newer.&lt;/p&gt;&#xA;&lt;p&gt;Enter &lt;a href=&#34;https://immich.app&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Immich&lt;/a&gt;&#xA;, a &amp;ldquo;self-hosted photo and video management solution&amp;rdquo;. I have used Immich personally for about a year and it felt like a great fit. Immich also went stable on October 1st, 2025 which made me feel much more comfortable using it in production.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Links</title>
       <link>https://gingersysadmin.com/links/</link>
