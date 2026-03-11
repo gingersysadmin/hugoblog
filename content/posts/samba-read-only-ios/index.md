@@ -1,11 +1,11 @@
 +++
-title = "iOS Device Showing Read-Only on Read-Write SMB / Samba Share"
+title = "iOS Device Showing Read-Only on Read-Write Samba Share"
 date = "2026-03-11T17:50:19-04:00"
 author = "Braden"
 cover = ""
 tags = ["ios", "samba"]
 keywords = ["ios", "samba"]
-description = "When accessing a SMB/Samba share on an iOS device, the directories load as read-only despite the user having read and write access to the directory. A simple config line in smb.conf fixes the issue."
+description = "When accessing a Samba share on an iOS device, the directories load as read-only despite the user having read and write access to the directory. A simple config line in smb.conf fixes the issue."
 showFullContent = false
 readingTime = false
 hideComments = false
@@ -39,7 +39,7 @@ After editing, restart or reload the Samba config.
 smbcontrol all reload-config
 ```
 
-Disconnect and reconnect from the SMB share on iOS and the ```read-only``` flag should disappear.
+Disconnect and reconnect from the Samba share on iOS and the ```read-only``` flag should disappear.
 
 ![iOS Files app correctly showing nothing at the bottom on a Samba share, indicating read-write access.](read-write-ios-samba-share.png)
 
