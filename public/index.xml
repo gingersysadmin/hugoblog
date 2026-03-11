@@ -6,8 +6,15 @@
     <description>Recent content on The Ginger Sysadmin Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Mar 2026 23:13:50 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 11 Mar 2026 17:50:19 -0400</lastBuildDate>
     <atom:link href="https://gingersysadmin.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>iOS Device Showing Read-Only on Read-Write SMB / Samba Share</title>
+      <link>https://gingersysadmin.com/posts/samba-read-only-ios/</link>
+      <pubDate>Wed, 11 Mar 2026 17:50:19 -0400</pubDate>
+      <guid>https://gingersysadmin.com/posts/samba-read-only-ios/</guid>
+      <description>&lt;h1 id=&#34;the-issue&#34;&gt;The Issue&lt;/h1&gt;&#xA;&lt;p&gt;Despite &lt;code&gt;read only = no&lt;/code&gt; being set on a Samba share in &lt;code&gt;/etc/samba/smb.conf&lt;/code&gt;, iOS shows a &amp;ldquo;Read-Only&amp;rdquo; flag with a crossed out pencil icon on any folder in the share when I access it from my Apple iPhone.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://gingersysadmin.com/posts/samba-read-only-ios/read-only-ios-samba-share.png&#34; alt=&#34;iOS Files app showing read-only at the bottom on a Samba share.&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;I previously used TrueNAS Samba shares and this was never an issue so I went to the Googles and found out why.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Proxying Immich</title>
       <link>https://gingersysadmin.com/posts/proxying-immich/</link>

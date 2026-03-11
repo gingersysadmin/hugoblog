@@ -6,8 +6,22 @@
     <description>Recent content in Tags on The Ginger Sysadmin Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Mar 2026 23:13:50 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 11 Mar 2026 17:50:19 -0400</lastBuildDate>
     <atom:link href="https://gingersysadmin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ios</title>
+      <link>https://gingersysadmin.com/tags/ios/</link>
+      <pubDate>Wed, 11 Mar 2026 17:50:19 -0400</pubDate>
+      <guid>https://gingersysadmin.com/tags/ios/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Samba</title>
+      <link>https://gingersysadmin.com/tags/samba/</link>
+      <pubDate>Wed, 11 Mar 2026 17:50:19 -0400</pubDate>
+      <guid>https://gingersysadmin.com/tags/samba/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Homelab</title>
       <link>https://gingersysadmin.com/tags/homelab/</link>
