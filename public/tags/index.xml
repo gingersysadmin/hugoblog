@@ -6,8 +6,22 @@
     <description>Recent content in Tags on The Ginger Sysadmin Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Mar 2026 17:50:19 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2026 21:55:33 -0400</lastBuildDate>
     <atom:link href="https://gingersysadmin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ssh</title>
+      <link>https://gingersysadmin.com/tags/ssh/</link>
+      <pubDate>Sun, 15 Mar 2026 21:55:33 -0400</pubDate>
+      <guid>https://gingersysadmin.com/tags/ssh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yubikey</title>
+      <link>https://gingersysadmin.com/tags/yubikey/</link>
+      <pubDate>Sun, 15 Mar 2026 21:55:33 -0400</pubDate>
+      <guid>https://gingersysadmin.com/tags/yubikey/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Ios</title>
       <link>https://gingersysadmin.com/tags/ios/</link>

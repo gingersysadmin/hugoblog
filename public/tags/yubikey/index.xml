@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yubikey on The Ginger Sysadmin Blog</title>
+    <link>https://gingersysadmin.com/tags/yubikey/</link>
+    <description>Recent content in Yubikey on The Ginger Sysadmin Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 15 Mar 2026 21:55:33 -0400</lastBuildDate>
+    <atom:link href="https://gingersysadmin.com/tags/yubikey/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Yubikey 5 for SSH Key Storage and Authentication</title>
+      <link>https://gingersysadmin.com/posts/yubikey-fido-ssh/</link>
+      <pubDate>Sun, 15 Mar 2026 21:55:33 -0400</pubDate>
+      <guid>https://gingersysadmin.com/posts/yubikey-fido-ssh/</guid>
+      <description>&lt;p&gt;I spent a fair amount of time reading articles by both Yubikey and others that attempted to explain this process but I always hit a roadblock. I finally found an excellent article by Luiz Costa&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; that worked perfectly.&lt;/p&gt;&#xA;&lt;p&gt;I am referencing Luiz&amp;rsquo;s article here as both a reminder for myself and to drive further traffic to it as it does an excellent job explaining this process, especially when using GNOME as it details how to get past GNOME keyring getting in the way.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

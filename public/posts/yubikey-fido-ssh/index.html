@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   
-    <title>iOS Device Showing Read-Only on Read-Write Samba Share :: The Ginger Sysadmin Blog</title>
+    <title>Using Yubikey 5 for SSH Key Storage and Authentication :: The Ginger Sysadmin Blog</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="When accessing a Samba share on an iOS device, the directories load as read-only despite the user having read and write access to the directory. A simple config line in smb.conf fixes the issue." />
-<meta name="keywords" content="ios, samba" />
+<meta name="description" content="How to use a Yubikey Series 5 key to create and store an SSH private key for authentication." />
+<meta name="keywords" content="yubikey, fido, ssh" />
 
   <meta name="robots" content="noodp" />
 
-<link rel="canonical" href="https://gingersysadmin.com/posts/samba-read-only-ios/" />
+<link rel="canonical" href="https://gingersysadmin.com/posts/yubikey-fido-ssh/" />
 
 
 
@@ -72,9 +72,9 @@
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="iOS Device Showing Read-Only on Read-Write Samba Share">
-<meta property="og:description" content="When accessing a Samba share on an iOS device, the directories load as read-only despite the user having read and write access to the directory. A simple config line in smb.conf fixes the issue." />
-<meta property="og:url" content="https://gingersysadmin.com/posts/samba-read-only-ios/" />
+<meta property="og:title" content="Using Yubikey 5 for SSH Key Storage and Authentication">
+<meta property="og:description" content="How to use a Yubikey Series 5 key to create and store an SSH private key for authentication." />
+<meta property="og:url" content="https://gingersysadmin.com/posts/yubikey-fido-ssh/" />
 <meta property="og:site_name" content="The Ginger Sysadmin Blog" />
 
   
@@ -85,7 +85,7 @@
 <meta property="og:image:height" content="627">
 
 
-  <meta property="article:published_time" content="2026-03-11 17:50:19 -0400 EDT" />
+  <meta property="article:published_time" content="2026-03-15 21:55:33 -0400 EDT" />
 
 
 
@@ -189,16 +189,16 @@
     
 <article class="post">
   <h1 class="post-title">
-    <a href="https://gingersysadmin.com/posts/samba-read-only-ios/">iOS Device Showing Read-Only on Read-Write Samba Share</a>
+    <a href="https://gingersysadmin.com/posts/yubikey-fido-ssh/">Using Yubikey 5 for SSH Key Storage and Authentication</a>
   </h1>
-  <div class="post-meta"><time class="post-date">2026-03-11</time><span class="post-author">Braden</span></div>
+  <div class="post-meta"><time class="post-date">2026-03-15</time><span class="post-author">Braden</span></div>
 
   
     <span class="post-tags">
       
-      #<a href="https://gingersysadmin.com/tags/ios/">ios</a>&nbsp;
+      #<a href="https://gingersysadmin.com/tags/yubikey/">yubikey</a>&nbsp;
       
-      #<a href="https://gingersysadmin.com/tags/samba/">samba</a>&nbsp;
+      #<a href="https://gingersysadmin.com/tags/ssh/">ssh</a>&nbsp;
       
     </span>
   
@@ -208,36 +208,30 @@
   
 
   <div class="post-content"><div>
-        <h1 id="the-issue">The Issue<a href="#the-issue" class="hanchor" ariaLabel="Anchor">#</a> </h1>
-<p>Despite <code>read only = no</code> being set on a Samba share in <code>/etc/samba/smb.conf</code>, iOS shows a &ldquo;Read-Only&rdquo; flag with a crossed out pencil icon on any folder in the share when I access it from my Apple iPhone.</p>
-<p><img src="/posts/samba-read-only-ios/read-only-ios-samba-share.png" alt="iOS Files app showing read-only at the bottom on a Samba share."></p>
-<p>I previously used TrueNAS Samba shares and this was never an issue so I went to the Googles and found out why.</p>
-<h1 id="the-solution">The Solution<a href="#the-solution" class="hanchor" ariaLabel="Anchor">#</a> </h1>
-<p>Thanks to a helpful discussion on Apple Community<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> as well as a blog article by fernvenue<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, I was able to identify the problem.</p>
-<p>Simply edit the <code>/etc/samba/smb.conf</code> file and add the line below to the <code>[global]</code> section (or under an individual share if you prefer).</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vfs <span class="nv">objects</span> <span class="o">=</span> streams_xattr
-</span></span></code></pre></div><p>The SambaWiki<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> explains the behavior with:</p>
-<ul>
-<li>&ldquo;The streams_xattr Virtual File System (VFS) module enables applications to store information in Alternative Data Streams (ADS). Certain applications, such as the Microsoft Edge browser, require ADS to operate correctly. For example, if you use Edge to download a file to a Samba share that has no ADS support enabled, the download will fail.&rdquo;</li>
-</ul>
-<p>After editing, restart or reload the Samba config.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">smbcontrol all reload-config
-</span></span></code></pre></div><p>Disconnect and reconnect from the Samba share on iOS and the <code>read-only</code> flag should disappear.</p>
-<p><img src="/posts/samba-read-only-ios/read-write-ios-samba-share.png" alt="iOS Files app correctly showing nothing at the bottom on a Samba share, indicating read-write access."></p>
-<h6 id="sources">Sources<a href="#sources" class="hanchor" ariaLabel="Anchor">#</a> </h6>
+        <p>I spent a fair amount of time reading articles by both Yubikey and others that attempted to explain this process but I always hit a roadblock. I finally found an excellent article by Luiz Costa<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> that worked perfectly.</p>
+<p>I am referencing Luiz&rsquo;s article here as both a reminder for myself and to drive further traffic to it as it does an excellent job explaining this process, especially when using GNOME as it details how to get past GNOME keyring getting in the way.</p>
+<p>You should definitely check out the full article linked below<sup id="fnref1:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, but here is a TLDR of the commands for quick reference.</p>
+<h1 id="key-generation-and-usage-commands">Key Generation and Usage Commands<a href="#key-generation-and-usage-commands" class="hanchor" ariaLabel="Anchor">#</a> </h1>
+<p>The following assumes you have already used Yubikey Authenticator<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> or Yubikey Manager<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> (deprecated) to setup a FIDO2 PIN.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-keygen -t ed25519-sk -O resident -O verify-required -O <span class="nv">application</span><span class="o">=</span>ssh:resourcenamehere -C <span class="s2">&#34;key-comment-here&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Copy public key generated above to server you wish to authenticate to</span>
+</span></span><span class="line"><span class="cl"><span class="nv">SSH_AUTH_SOCK</span><span class="o">=</span><span class="s2">&#34;&#34;</span> ssh -i .ssh/id_ed25519 -o <span class="nv">IdentitiesOnly</span><span class="o">=</span>yes user@example.com
+</span></span><span class="line"><span class="cl"><span class="c1"># Import resident key file on a new computer (insert yubikey and run the below command)</span>
+</span></span><span class="line"><span class="cl">ssh-keygen -K
+</span></span></code></pre></div><h6 id="references">References<a href="#references" class="hanchor" ariaLabel="Anchor">#</a> </h6>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1">
-<p><a href="https://discussions.apple.com/thread/255775451" target="_blank" rel="noopener">https://discussions.apple.com/thread/255775451</a>
-&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://thenets.org/using-a-yubikey-5c-for-ssh-and-git-authentication-on-linux/" target="_blank" rel="noopener">https://thenets.org/using-a-yubikey-5c-for-ssh-and-git-authentication-on-linux/</a>
+&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2">
-<p><a href="https://blog.fernvenue.com/archives/samba-read-only-issue-on-ios" target="_blank" rel="noopener">https://blog.fernvenue.com/archives/samba-read-only-issue-on-ios</a>
+<p><a href="https://www.yubico.com/products/yubico-authenticator/" target="_blank" rel="noopener">https://www.yubico.com/products/yubico-authenticator/</a>
 &#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3">
-<p><a href="https://wiki.samba.org/index.php/Using_the_streams_xattr_VFS_Module" target="_blank" rel="noopener">https://wiki.samba.org/index.php/Using_the_streams_xattr_VFS_Module</a>
+<p><a href="https://www.yubico.com/support/download/yubikey-manager/" target="_blank" rel="noopener">https://www.yubico.com/support/download/yubikey-manager/</a>
 &#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
@@ -254,16 +248,10 @@
   </div>
   <div class="pagination__buttons">
     
-      <a href="https://gingersysadmin.com/posts/yubikey-fido-ssh/" class="button inline prev">
-        &lt; [<span class="button__text">Using Yubikey 5 for SSH Key Storage and Authentication</span>]
-      </a>
     
     
-      ::
-    
-    
-      <a href="https://gingersysadmin.com/posts/proxying-immich/" class="button inline next">
-         [<span class="button__text">Proxying Immich</span>] &gt;
+      <a href="https://gingersysadmin.com/posts/samba-read-only-ios/" class="button inline next">
+         [<span class="button__text">iOS Device Showing Read-Only on Read-Write Samba Share</span>] &gt;
       </a>
     
   </div>

@@ -9,7 +9,7 @@
     <lastBuildDate>Wed, 11 Mar 2026 17:50:19 -0400</lastBuildDate>
     <atom:link href="https://gingersysadmin.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>iOS Device Showing Read-Only on Read-Write SMB / Samba Share</title>
+      <title>iOS Device Showing Read-Only on Read-Write Samba Share</title>
       <link>https://gingersysadmin.com/posts/samba-read-only-ios/</link>
       <pubDate>Wed, 11 Mar 2026 17:50:19 -0400</pubDate>
       <guid>https://gingersysadmin.com/posts/samba-read-only-ios/</guid>
